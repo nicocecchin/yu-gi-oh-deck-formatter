@@ -1,5 +1,7 @@
 import requests
 import json
+import os
+import time
 
 def isExtra(type):
     print(type)
@@ -90,7 +92,11 @@ def writeDeck(decks):
     output_file.write("!side\n")
 
 
-input_file = open("C:/Users/nicoc/Projects/yu-gi-oh-deck-formatter/windows_app/input.txt", "r")
+path = os.path.dirname(os.path.abspath("input.txt")) + "\\input.txt"
+print(path)
+
+
+input_file = open(path, "r")
 output_file = open("deck.ydk", "w")
 
 deck_list = []
