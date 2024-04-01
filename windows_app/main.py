@@ -2,6 +2,7 @@ import requests
 import json
 
 def isExtra(type):
+    print(type)
     if type == "xyz" or "synchro" or "fusion" or "link":
         return True
     else:
@@ -83,13 +84,13 @@ def writeDeck(decks):
         
     output_file.write("#extra\n")
 
-    for elem in decks[0]:
+    for elem in decks[1]:
         output_file.write(elem + "\n")
 
     output_file.write("!side\n")
 
 
-input_file = open("input.txt", "r")
+input_file = open("C:/Users/nicoc/Projects/yu-gi-oh-deck-formatter/windows_app/input.txt", "r")
 output_file = open("deck.ydk", "w")
 
 deck_list = []
